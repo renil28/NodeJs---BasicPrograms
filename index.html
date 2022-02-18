@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+    <style>
+          table {
+      width: 50%;
+      margin-left: 15px;
+    }
+    th, td {
+      text-align: left;
+      padding-left: 8px;
+    }
+    th {
+      background-color: #cc4e4e;
+      color: white;
+    }
+
+    tr:nth-child(even) {background-color: #f2f2f2;}
+    
+    h2{
+      margin-left: 15px;
+    }
+    p{
+      margin-left: 15px;
+    }
+    input{
+      margin-left: 10px;
+    }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+    <title>Employee Table</title>
+    <script src="3client.js"></script>
+</head>
+<h1>Salary Information</h1>
+<body ng-controller="myctrl">
+    <div>
+        <table border="2px">
+            <tr>
+            <th>Employee Name</th>
+            <th>Salary</th>
+            </tr>
+            <tr ng-repeat="item in names">
+                <td>{{item.emp}}</td>
+                <td>{{item.sal}}</td>
+            </tr>
+        </table>
+    </div>
+    
+</body>
+</html>
